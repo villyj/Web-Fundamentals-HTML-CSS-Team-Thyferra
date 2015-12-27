@@ -1,7 +1,14 @@
-﻿body {
+﻿
+@font-face {
+    font-family: 'texgyreadventor-regular';
+    src: url('fonts/texgyreadventor-regular.otf') format('opentype');
+}
+
+body {
     background: url('../resources/abstract.jpg');
     background-size: 100% 100%;
-    font-size: 16px;
+    font-size: 14px;
+    font-family: texgyreadventor-regular;
 
     #wrapper {
         width: 100%;
@@ -20,6 +27,7 @@
 
                     li {
                         border-radius: 10px;
+                        border: 1px solid white;
                         width: fit-content;
                         padding: 10px;
                         margin: 20px 0;

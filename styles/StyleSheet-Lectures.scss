@@ -1,0 +1,93 @@
+﻿@font-face {
+    font-family: 'texgyreadventor-regular';
+    src: url("fonts/texgyreadventor-regular.otf") format("opentype");
+}
+
+@mixin radial-gradient($color1,$color2 ) {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f7ea+0,e5aa02+100 */
+    background: -moz-radial-gradient(center, ellipse cover, $color1 0%, $color2 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, $color1 0%, $color2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, $color1 0%, $color2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f7ea', endColorstr='#e5aa02',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+body {
+    font-size: 14px;
+    font-family: texgyreadventor-regular;
+
+    #wrapper {
+        position: absolute;
+        width: 100%;
+        height: 680px;
+        background-image: url('../resources/lectures-background.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        nav {
+            ul {
+                margin-top: 200px;
+
+                li {
+                    margin: 30px 0 30px 31px;
+                    border-radius: 50%;
+                    background-color: red;
+                    padding: 12px;
+                    width: fit-content;
+                    -webkit-box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+                    -moz-box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+                    box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+
+
+                    &:nth-child(1) {
+                        background-color: saddlebrown;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: rgba(229,170,2,1);
+                        color: lightgray;
+
+                        &:nth-child(2):hover {
+                            a {
+                                pointer-events: none;
+                                cursor: default;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        background-color: #a900b4;
+                    }
+
+                    &:nth-child(4) {
+                        background-color: #50ac00;
+                    }
+
+                    &:nth-child(5) {
+                        background-color: #017395;
+                    }
+
+                    &:nth-child(6) {
+                        backgorund-color: #c5bd99;
+                    }
+
+                    a {
+                        display: none;
+                    }
+
+                    &:hover {
+                        border: 3px solid white;
+                        padding: 10px;
+                        border-radius: 10px;
+
+                        a {
+                            display: block;
+                            color: white;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

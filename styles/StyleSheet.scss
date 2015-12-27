@@ -91,14 +91,14 @@ body {
 
         footer {
             background: rgba(89,85,84,0.5);
-            height: 80px;
+            
             position: absolute;
             bottom: 0;
             width: 100%;
             text-align: center;
 
             ul {
-                margin-top: 17px;
+                margin-top: 10px;
                 list-style: none;
                 display: flex;
                 -ms-flex-direction: row;
@@ -135,6 +135,13 @@ body {
                         font-size: 0.8em;
                     }
                 }
+            }
+            p{
+                margin:0;
+                margin-bottom:2px;
+                color:white;
+                font-size:0.7em;
+                opacity:0.5;
             }
         }
     }

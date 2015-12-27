@@ -6,12 +6,17 @@
 
 body #wrapper {
   width: 100%;
-  height: 635px;
+  height: 715px;
+}
+
+body #wrapper section nav {
+  width: fit-content;
+  margin: 0 350px;
+  padding: 20px;
 }
 
 body #wrapper section nav ul {
   list-style: none;
-  margin: 80px 400px;
   padding: 0;
 }
 
@@ -76,8 +81,8 @@ body #wrapper section nav ul li:nth-child(5) {
 }
 
 body #wrapper footer {
-  background: rgba(89, 85, 84, 0.9);
-  height: 100px;
+  background: rgba(89, 85, 84, 0.5);
+  height: 80px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -85,7 +90,7 @@ body #wrapper footer {
 }
 
 body #wrapper footer ul {
-  margin-top: 25px;
+  margin-top: 17px;
   list-style: none;
   display: flex;
   -ms-flex-direction: row;
@@ -103,7 +108,7 @@ body #wrapper footer ul li {
   align-items: center;
   justify-content: center;
   text-transform: lowercase;
-  border-radius: 50px;
+  border-radius: 100px;
   border-left: 2px solid white;
   border-right: 2px solid white;
   padding: 25px;
@@ -116,7 +121,7 @@ body #wrapper footer ul li {
 
 body #wrapper footer ul li:hover {
   text-transform: uppercase;
-  width: 150px;
+  width: 200px;
 }
 
 body #wrapper footer ul li a {

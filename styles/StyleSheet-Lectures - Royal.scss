@@ -1,0 +1,316 @@
+﻿@import url('StyleSheet-Lectures - Royal.min.css');
+
+@font-face {
+    font-family: 'texgyreadventor-regular';
+    src: url("fonts/texgyreadventor-regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'szlichta07';
+    src: url('fonts/szlichta07.ttf') format('truetype');
+}
+
+@mixin radial-gradient($color1,$color2 ) {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f7ea+0,e5aa02+100 */
+    background: -moz-radial-gradient(center, ellipse cover, $color1 0%, $color2 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, $color1 0%, $color2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, $color1 0%, $color2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f7ea', endColorstr='#e5aa02',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+body {
+    font-size: 14px;
+    font-family: texgyreadventor-regular;
+
+
+    #wrapper {
+        margin: 0;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 5px;
+        width: 100%;
+        height: 100%;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f2f2+0,cdcdcd+100 */
+        background: rgb(242,242,242); /* Old browsers */
+        background: -moz-linear-gradient(left, rgba(242,242,242,1) 0%, rgba(205,205,205,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(242,242,242,1) 0%,rgba(205,205,205,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(242,242,242,1) 0%,rgba(205,205,205,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#cdcdcd',GradientType=1 ); /* IE6-9 */
+        header {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            padding-bottom: 8px;
+            justify-content: flex-end;
+            background-color: rgba(195,195,195,0.6);
+
+            h1 {
+                margin-left: 150px;
+                margin-right: 50px;
+                font-size: 2.5em;
+                color: white;
+                text-shadow: 0px 0px 4px #262B27;
+            }
+        }
+
+        main {
+            & > nav {
+                background-image: url('../resources/element1.PNG');
+                background-repeat: repeat-y;
+                width: 150px;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+
+                & > ul {
+                    margin-top: 200px;
+                    margin-bottom: 140px;
+
+                    & > li {
+                        margin: 30px 0 30px 33px;
+                        border-radius: 50%;
+                        background-color: red;
+                        padding: 12px; /*Size of balls*/
+                        width: fit-content;
+                        -webkit-box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+                        -moz-box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+                        box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+
+
+                        &:nth-child(1) {
+                            background-color: saddlebrown;
+                        }
+
+                        &:nth-child(2) {
+                            background-color: rgba(229,170,2,1);
+                            color: lightgray;
+
+                            &:nth-child(2):hover {
+                                a {
+                                    pointer-events: none;
+                                    cursor: default;
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            background-color: #a900b4;
+                        }
+
+                        &:nth-child(4) {
+                            background-color: #50ac00;
+                        }
+
+                        &:nth-child(5) {
+                            background-color: #017395;
+                        }
+
+                        &:nth-child(6) {
+                            background-color: #c5bd99;
+                        }
+
+                        a {
+                            display: none;
+                        }
+
+                        &:hover {
+                            border: 3px solid white;
+                            padding: 10px;
+                            border-radius: 10px;
+
+                            a {
+                                display: block;
+                                color: white;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #inner {
+                height: 100%;
+                margin-left: 155px;
+                margin-top: 50px;
+
+
+
+
+                .article-field {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    flex-wrap: wrap;
+
+
+
+                    article {
+                        flex: 30%;
+                        background: white;
+                        z-index: 1;
+                         font-family: 'szlichta07';
+                        border: 1px solid rgba(195,195,195,0.6);
+                        -webkit-box-shadow: 39px 9px 59px -25px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 39px 9px 59px -25px rgba(0,0,0,0.75);
+                        box-shadow: 39px 9px 59px -25px rgba(0,0,0,0.75);
+
+                        table {
+                            width: 100%;
+                            border-spacing: 20px;
+
+                            th {
+                                padding: 30px;
+                            }
+
+                            h3 {
+                                font-size: 2.2em;
+                                margin-bottom: 12px;
+                                font-weight: bolder;
+                            }
+
+                            h4 {
+                                font-size: 1.2em;
+                                font-style: italic;
+                            }
+
+                            td:first-child {
+                                font-weight: bolder;
+                                font-size: 1.3em;
+                                width: 70px;
+                                padding: 10px;
+                                text-align: left;
+                                vertical-align: top;
+                            }
+
+                            #quotes {
+                                font-size: 3em;
+                                text-align: center;
+                                vertical-align: middle;
+                                padding: 40px;
+                                line-height: 1.4em;
+                            }
+
+                            #knolage {
+                                text-align: left;
+                                vertical-align: middle;
+                                padding: 40px;
+                                line-height: 1.4em;
+
+                                ul {
+                                    li {
+                                        margin-bottom: 15px;
+
+                                        &:before {
+                                            content: '-';
+                                        }
+                                    }
+                                }
+                            }
+
+                            #friends {
+                                text-align: left;
+                                vertical-align: middle;
+                                padding: 40px;
+                            }
+                        }
+                    }
+
+                    & > img {
+                        margin-top: 30px;
+                        flex: 30%;
+                        max-width: 50%;
+                    }
+
+                    .other-lectors {
+                        flex: 100%;
+                        width: fit-content;
+                        border-top: 10px solid white;
+
+
+
+                        ul {
+                            display: flex;
+                            -ms-flex-direction: row;
+                            -webkit-flex-direction: row;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            li {
+                                border: 5px solid white;
+                                width: fit-content;
+                                margin: 10px 30px;
+                                border-radius: 100px;
+                                overflow: hidden;
+                                -webkit-box-shadow: 0px 2px 15px 2px rgba(0,0,0,0.75);
+                                -moz-box-shadow: 0px 2px 15px 2px rgba(0,0,0,0.75);
+                                box-shadow: 0px 2px 15px 2px rgba(0,0,0,0.75);
+
+
+
+                                &:first-child {
+                                    border: none;
+                                    box-shadow: none;
+
+                                    a {
+                                        & > img {
+                                            width: 50px;
+                                            height: 50px;
+                                            -webkit-transform: scaleX(-1);
+                                            -moz-transform: scaleX(-1);
+                                            -ms-transform: scaleX(-1);
+                                            -o-transform: scaleX(-1);
+                                            transform: scaleX(-1);
+                                        }
+                                    }
+                                }
+
+
+
+                                & > img {
+                                    width: 50px;
+                                    height: 50px;
+                                }
+
+
+
+                                &:last-child {
+                                    border: none;
+                                    box-shadow: none;
+
+                                    a {
+                                        & > img {
+                                            width: 50px;
+                                            height: 50px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        footer {
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            text-align: center;
+            font-size: 0.7em;
+
+            p {
+                margin: 0px;
+                margin-bottom: 2px;
+                opacity: 0.5;
+            }
+        }
+    }
+}

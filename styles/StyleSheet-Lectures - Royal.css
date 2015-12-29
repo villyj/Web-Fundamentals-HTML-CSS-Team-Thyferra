@@ -63,6 +63,7 @@ body #wrapper main > nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 body #wrapper main > nav > ul {
@@ -88,12 +89,6 @@ body #wrapper main > nav > ul > li:nth-child(1) {
 
 body #wrapper main > nav > ul > li:nth-child(2) {
   background-color: #e5aa02;
-  color: lightgray;
-}
-
-body #wrapper main > nav > ul > li:nth-child(2):nth-child(2):hover a {
-  pointer-events: none;
-  cursor: default;
 }
 
 body #wrapper main > nav > ul > li:nth-child(3) {

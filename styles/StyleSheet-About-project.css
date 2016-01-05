@@ -1,0 +1,262 @@
+﻿@import url("StyleSheet-Lectures - Royal.min.css");
+@font-face {
+  font-family: 'texgyreadventor-regular';
+  src: url("fonts/texgyreadventor-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'szlichta07';
+  src: url("fonts/szlichta07.ttf") format("truetype");
+}
+
+body {
+  font-size: 14px;
+  font-family: texgyreadventor-regular;
+}
+
+body #wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f2f2+0,cdcdcd+100 */
+  background: #f2f2f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #f2f2f2 0%, #cdcdcd 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f2f2f2 0%, #cdcdcd 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f2f2f2 0%, #cdcdcd 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#cdcdcd',GradientType=1 );
+  /* IE6-9 */
+}
+
+body #wrapper header {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  padding-bottom: 8px;
+  justify-content: flex-end;
+  background-color: rgba(195, 195, 195, 0.6);
+}
+
+body #wrapper header h1 {
+  margin-left: 150px;
+  margin-right: 50px;
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 0px 0px 4px #262B27;
+}
+
+body #wrapper main > nav {
+  background-image: url("../resources/element1.PNG");
+  background-repeat: repeat-y;
+  width: 150px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+body #wrapper main > nav > ul {
+  margin-top: 200px;
+}
+
+body #wrapper main > nav > ul > li {
+  margin: 30px 0 30px 33px;
+  border-radius: 50%;
+  background-color: red;
+  padding: 12px;
+  /*Size of balls*/
+  width: fit-content;
+  -webkit-box-shadow: inset 3px 3px 17px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 3px 3px 17px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 3px 3px 17px -1px rgba(0, 0, 0, 0.75);
+}
+
+body #wrapper main > nav > ul > li:nth-child(1) {
+  background-color: saddlebrown;
+}
+
+body #wrapper main > nav > ul > li:nth-child(2) {
+  background-color: #e5aa02;
+}
+
+body #wrapper main > nav > ul > li:nth-child(3) {
+  background-color: #a900b4;
+}
+
+body #wrapper main > nav > ul > li:nth-child(4) {
+  background-color: #50ac00;
+}
+
+body #wrapper main > nav > ul > li:nth-child(5) {
+  background-color: #017395;
+}
+
+body #wrapper main > nav > ul > li:nth-child(6) {
+  background-color: #c5bd99;
+}
+
+body #wrapper main > nav > ul > li a {
+  display: none;
+}
+
+body #wrapper main > nav > ul > li:hover {
+  border: 3px solid white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+body #wrapper main > nav > ul > li:hover a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body #wrapper main #inner {
+  margin-left: 155px;
+  margin-top: 50px;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body #wrapper main #inner .article-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+body #wrapper footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+body #wrapper footer p {
+  margin: 0;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 970px) {
+  body {
+    font-size: 10px;
+  }
+  body #wrapper main > nav {
+    width: 100px;
+  }
+  body #wrapper main #inner {
+    margin-left: 105px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  body #wrapper {
+    position: relative;
+  }
+  body #wrapper header {
+    justify-content: center;
+  }
+  body #wrapper main #inner .article-field {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body #wrapper main #inner .article-field article {
+    order: 3;
+  }
+  body #wrapper main #inner .article-field > img {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border: 10px solid white;
+  }
+  body #wrapper main #inner .article-field .other-lectors {
+    order: 2;
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  body #wrapper header {
+    justify-content: center;
+  }
+  body #wrapper main > nav {
+    position: fixed;
+    width: 40px;
+  }
+  body #wrapper main > nav > ul {
+    margin-top: 200px;
+  }
+  body #wrapper main > nav > ul > li {
+    margin: 30px 0 30px 25px;
+    border-radius: 50%;
+    background-color: red;
+    padding: 7px;
+    /*Size of balls*/
+  }
+  body #wrapper main #inner {
+    margin-left: 40px;
+  }
+  body #wrapper main #inner .article-field {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body #wrapper main #inner .article-field article {
+    order: 3;
+  }
+  body #wrapper main #inner .article-field > img {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border: 10px solid white;
+  }
+  body #wrapper main #inner .article-field .other-lectors {
+    max-width: 100%;
+    order: 2;
+    border: none;
+  }
+  body #wrapper main #inner .article-field .other-lectors ul {
+    max-width: 100%;
+  }
+  body #wrapper main #inner .article-field .other-lectors ul li {
+    border: 5px solid white;
+    width: fit-content;
+    margin: 20px 30px;
+    border-radius: 100px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.75);
+  }
+  body #wrapper main #inner .article-field .other-lectors ul li:nth-child(2), body #wrapper main #inner .article-field .other-lectors ul li:nth-child(3) {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=StyleSheet-About-project.css.map */

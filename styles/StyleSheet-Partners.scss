@@ -1,0 +1,221 @@
+﻿@font-face {
+    font-family: 'texgyreadventor-regular';
+    src: url('fonts/texgyreadventor-regular.otf') format('opentype');
+}
+
+@mixin radial-gradient($color1,$color2 ) {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f7ea+0,e5aa02+100 */
+    background: -moz-radial-gradient(center, ellipse cover, $color1 0%, $color2 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, $color1 0%, $color2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, $color1 0%, $color2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f7ea', endColorstr='#e5aa02',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+body {
+    font-size: 14px;
+    font-family: texgyreadventor-regular;
+
+
+    #wrapper {
+        box-sizing: border-box;
+        padding: 5px;
+        position: absolute;
+        width: 100%;
+        min-height: 714px;
+        background-image: url('../resources/lectures-background.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
+
+        header {
+            width: 100%;
+            margin-top: 2px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            h1 {
+                margin-left: 150px;
+                margin-right: 50px;
+                font-size: 2.5em;
+                color: white;
+                text-shadow: 0px 0px 4px #262B27;
+            }
+        }
+
+        nav {
+            float: left;
+            width: 15%;
+
+            ul {
+                margin-top: 200px;
+                margin-bottom: 140px;
+
+                li {
+                    margin: 30px 0 30px 26px;
+                    border-radius: 50%;
+                    background-color: red;
+                    padding: 12px;
+                    width: fit-content;
+                    -webkit-box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+                    -moz-box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+                    box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+
+
+                    &:nth-child(1) {
+                        background-color: saddlebrown;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: rgba(229,170,2,1);
+                        color: lightgray;
+
+                        &:nth-child(2):hover {
+                            a {
+                                pointer-events: none;
+                                cursor: default;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        background-color: #a900b4;
+                    }
+
+                    &:nth-child(4) {
+                        background-color: #50ac00;
+                    }
+
+                    &:nth-child(5) {
+                        background-color: #017395;
+                    }
+
+                    &:nth-child(6) {
+                        background-color: #c5bd99;
+                    }
+
+                    a {
+                        display: none;
+                    }
+
+                    &:hover {
+                        border: 3px solid white;
+                        padding: 10px;
+                        border-radius: 10px;
+
+                        a {
+                            display: block;
+                            color: white;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+
+        aside {
+            padding: 10px;
+            float: left;
+            margin-top: 80px;
+            display: flex;
+            -ms-flex-direction: row;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+
+
+
+
+            .container {
+                margin: 10px;
+                width: 220px;
+                height: 146px;
+                border: 3px solid white;
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+                -o-object-fit: fill;
+                object-fit: fill;
+                -moz-transition: all .2s ease-in-out;
+                -o-transition: all .2s ease-in-out;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+                -webkit-box-shadow: 1px 6px 29px -1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 1px 6px 29px -1px rgba(0,0,0,0.75);
+                box-shadow: 1px 6px 29px -1px rgba(0,0,0,0.75);
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
+                .textbox {
+                    width: 220px;
+                    height: 30px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    text-align: center;
+                    margin-top: -30px;
+                    border-radius: 5px;
+                    background-color: rgba(0,0,0,0.5);
+                    -webkit-box-shadow: inset 0px 0px 5px 2px rgba(255,255,255,.75);
+                    box-shadow: inset 0px 0px 5px 2px rgba(255,255,255,.75);
+                }
+
+                &:hover {
+                    -moz-transform: scale(1.7);
+                    -ms-transform: scale(1.7);
+                    -o-transform: scale(1.7);
+                    -webkit-transform: scale(1.7);
+                    transform: scale(1.7);
+                    z-index: 1;
+
+                    .textbox {
+                        margin-top: 116px;
+                    }
+                }
+
+                .text {
+                    padding-top: 5px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 0.7em;
+                    }
+                }
+
+                .textbox {
+                    -webkit-transition: all 0.7s ease;
+                    transition: all 0.7s ease;
+                }
+            }
+        }
+
+        footer {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            font-size: 0.7em;
+
+            p {
+                margin: 0px;
+                margin-bottom: 2px;
+                opacity: 0.5;
+            }
+        }
+    }
+}

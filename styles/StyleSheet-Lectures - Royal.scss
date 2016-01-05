@@ -24,7 +24,7 @@ body {
 
 
     #wrapper {
-        position: relative;
+        position: absolute;
         top: 0;
         left: 0;
         margin: 0;
@@ -66,7 +66,7 @@ body {
                 background-repeat: repeat-y;
                 width: 150px;
                 height: 100%;
-                position: absolute;
+                position: fixed;
                 top: 0;
                 left: 0;
                 z-index: 2;
@@ -160,7 +160,7 @@ body {
                         box-shadow: 39px 9px 59px -25px rgba(0,0,0,0.75);
 
                         table {
-                            width: 100%;
+                            max-width: 100%;
                             border-spacing: 10px;
 
                             th {
@@ -324,7 +324,7 @@ body {
 
         #wrapper {
             main {
-                nav {
+                & > nav {
                     width: 100px;
                 }
 
@@ -339,6 +339,8 @@ body {
 @media only screen and (max-width:750px) {
     body {
         #wrapper {
+            position: relative;
+
             header {
                 justify-content: center;
             }
@@ -374,9 +376,84 @@ body {
     }
 }
 
-@media only screen and (max-width:360px) {
+@media only screen and (max-width:580px) {
     body {
         #wrapper {
+
+
+            header {
+                justify-content: center;
+            }
+
+            main {
+                & > nav {
+                    position: fixed;
+                    width: 40px;
+
+                    & > ul {
+                        margin-top: 200px;
+
+
+                        & > li {
+                            margin: 30px 0 30px 25px;
+                            border-radius: 50%;
+                            background-color: red;
+                            padding: 7px; /*Size of balls*/
+                        }
+                    }
+                }
+
+                #inner {
+                    margin-left: 40px;
+
+                    .article-field {
+                        -ms-flex-direction: column;
+                        -webkit-flex-direction: column;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        article {
+                            order: 3;
+                        }
+
+                        & > img {
+                            order: 1;
+                            margin-top: 0;
+                            margin-bottom: 10px;
+                            border: 10px solid white;
+                        }
+
+                        .other-lectors {
+                            max-width: 100%;
+                            order: 2;
+                            border: none;
+
+                            ul {
+                                max-width: 100%;
+
+
+                                li {
+                                    border: 5px solid white;
+                                    width: fit-content;
+                                    margin: 20px 30px;
+                                    border-radius: 100px;
+                                    overflow: hidden;
+                                    -webkit-box-shadow: 0px 2px 15px 2px rgba(0,0,0,0.75);
+                                    -moz-box-shadow: 0px 2px 15px 2px rgba(0,0,0,0.75);
+                                    box-shadow: 0px 2px 15px 2px rgba(0,0,0,0.75);
+
+
+
+                                    &:nth-child(2), &:nth-child(3) {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

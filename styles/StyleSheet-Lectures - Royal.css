@@ -15,7 +15,7 @@ body {
 }
 
 body #wrapper {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   margin: 0;
@@ -63,7 +63,7 @@ body #wrapper main > nav {
   background-repeat: repeat-y;
   width: 150px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
@@ -155,7 +155,7 @@ body #wrapper main #inner .article-field article {
 }
 
 body #wrapper main #inner .article-field article table {
-  width: 100%;
+  max-width: 100%;
   border-spacing: 10px;
 }
 
@@ -295,7 +295,7 @@ body #wrapper footer p {
   body {
     font-size: 10px;
   }
-  body #wrapper main nav {
+  body #wrapper main > nav {
     width: 100px;
   }
   body #wrapper main #inner {
@@ -304,6 +304,9 @@ body #wrapper footer p {
 }
 
 @media only screen and (max-width: 750px) {
+  body #wrapper {
+    position: relative;
+  }
   body #wrapper header {
     justify-content: center;
   }
@@ -326,6 +329,66 @@ body #wrapper footer p {
   body #wrapper main #inner .article-field .other-lectors {
     order: 2;
     border: none;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  body #wrapper header {
+    justify-content: center;
+  }
+  body #wrapper main > nav {
+    position: fixed;
+    width: 40px;
+  }
+  body #wrapper main > nav > ul {
+    margin-top: 200px;
+  }
+  body #wrapper main > nav > ul > li {
+    margin: 30px 0 30px 25px;
+    border-radius: 50%;
+    background-color: red;
+    padding: 7px;
+    /*Size of balls*/
+  }
+  body #wrapper main #inner {
+    margin-left: 40px;
+  }
+  body #wrapper main #inner .article-field {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body #wrapper main #inner .article-field article {
+    order: 3;
+  }
+  body #wrapper main #inner .article-field > img {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border: 10px solid white;
+  }
+  body #wrapper main #inner .article-field .other-lectors {
+    max-width: 100%;
+    order: 2;
+    border: none;
+  }
+  body #wrapper main #inner .article-field .other-lectors ul {
+    max-width: 100%;
+  }
+  body #wrapper main #inner .article-field .other-lectors ul li {
+    border: 5px solid white;
+    width: fit-content;
+    margin: 20px 30px;
+    border-radius: 100px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.75);
+  }
+  body #wrapper main #inner .article-field .other-lectors ul li:nth-child(2), body #wrapper main #inner .article-field .other-lectors ul li:nth-child(3) {
+    display: none;
   }
 }
 

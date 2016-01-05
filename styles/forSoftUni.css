@@ -1,0 +1,115 @@
+﻿@font-face {
+  font-family: 'texgyreadventor-regular';
+  src: url("fonts/texgyreadventor-regular.otf") format("opentype"); }
+
+body {
+    background-image: url('../resources/lectures-background.png');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+  body #wrapper {
+    width: 88%;
+    margin-left: 183px;
+    font-family: 'texgyreadventor-regular';
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    body #wrapper #page-header {
+      height: 70px;
+      padding-top: 5px;
+      text-align: center; }
+      body #wrapper #page-header h1 {
+        margin: 0;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 10px 10px 5px #808080; }
+    body #wrapper main {
+      width: 100%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+      body #wrapper main section {
+        background-color: rgba(200, 200, 200, 0.8);
+        border-top-left-radius: 10px; }
+        body #wrapper main section header {
+          width: 100%;
+          padding: 15px;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: space-around; }
+          body #wrapper main section header img {
+            width: 275px;
+            height: 184px;
+            max-width: 100%; }
+            @media all and (max-width: 768px) {
+              body #wrapper main section header img {
+                display: none; } }
+          body #wrapper main section header h2 {
+            width: 70%;
+            margin-top: 30px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 10px 10px 8px #808080; }
+            @media all and (max-width: 768px) {
+              body #wrapper main section header h2 {
+                width: 95%;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                text-align: center; } }
+        body #wrapper main section article {
+          padding: 15px;
+          display: flex;
+          justify-content: space-between;
+          background-color: #c3c3c3; }
+          body #wrapper main section article .content {
+            width: 30%;
+            padding: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 8px 8px 10px #808080; }
+          body #wrapper main section article #carousel-container {
+            width: 65%; }
+            body #wrapper main section article #carousel-container #myCarousel .carousel-inner > .item > img,
+            body #wrapper main section article #carousel-container #myCarousel .carousel-inner > .item > a > img {
+              width: 525px;
+              height: 430px;
+              margin: 0 auto; }
+            body #wrapper main section article #carousel-container #myCarousel .carousel-caption {
+              width: 60%;
+              margin: 0 auto;
+              background-color: rgba(200, 200, 200, 0.2); }
+    body #wrapper footer {
+      text-align: center;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: rgba(200, 200, 200, 0.8);
+      padding: 15px; }
+      body #wrapper footer p {
+        margin: 0;
+        color: grey; }
+
+@media all and (max-width: 1200px) {
+  body {
+    background: none; }
+    body #wrapper {
+      width: 100%;
+      margin: 0; }
+      body #wrapper #page-header {
+        padding-top: 10px;
+        background-color: rgba(200, 200, 200, 0.8); }
+      body #wrapper section article {
+        -ms-flex-direction: column-reverse;
+        -webkit-flex-direction: column-reverse;
+        flex-direction: column-reverse; }
+        body #wrapper section article .content {
+          width: 100% !important; }
+        body #wrapper section article #carousel-container {
+          width: 100% !important; } }
+

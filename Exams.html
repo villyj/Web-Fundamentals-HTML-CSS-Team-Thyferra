@@ -4,7 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles/reset.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="styles/StyleSheet-Exams.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <title>Exams</title>
 </head>
 <body>
@@ -25,9 +28,96 @@
                 </ul>
             </nav>
             <div id="inner">
-                <div class="article-field">
-                </div></div>
+                <div id="carousel-container">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="resources/exam-before.jpg" alt="scholarships" />
+                                <div class="carousel-caption">
+                                    <h3>Преди изпит</h3>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="resources/exam-after.jpg" alt="boom" />
+                                <div class="carousel-caption">
+                                    <h3>След изпит</h3>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="resources/exam-during.jpg" alt="projects" />
+                                <div class="carousel-caption">
+                                    <h3>По време на изпит</h3>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="resources/exam-before-result.jpg" alt="yoda" />
+                                <div class="carousel-caption">
+                                    <h3>В очакване на резултати</h3>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="resources/exam-after-result.jpg" alt="diploma" />
+                                <div class="carousel-caption">
+                                    <h3>След резултатите</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div id="container">
+                    <div class="exams" id="basic">
+                        <h3>C# Basic</h3>
+                        <article>
+                            <p>
+                                <span>1 зад.</span>
+                                Летят си две овце, една розова, другата върви в дясно. Колко пари струва килограм асфалт, ако овцата е на 7 години?
+                            </p>
+
+                            <p>
+                                <span>2 зад.</span>
+                                Два гущера си вървят из пустинята, единият попитал колко е часа, другият извадил термометър и казал, че е вторник? В задачата се пита от какъв пол е гущера от ляво?
+                            </p>
+
+                            <p>
+                                <span>3 зад.</span>
+                                Защо чичо Скруч има кърпа около кръста, когато излиза от банята, а по принцип ходи без гащи?
+                            </p>
+
+                            <p>
+                                <span>4 зад.</span>
+                                Каква сила на напън трябва да се приложи, за да си сложиш тенджера на главата, да се хванеш за дръжките й и да се набереш.
+                            </p>
+
+                        </article>
+                    </div>
+                    <div class="exams" id="advance">
+                        <h3>C# Advance</h3>
+                        <article>
+                          
+
+                           
+                        </article>
+                    </div>
+                    <div class="exams" id="java">
+                        <h3>Java Fundamental</h3>
+                        <article>
+                    
+                        </article>
+                    </div>
+                </div>
+            </div>
 
         </main>
         <footer>

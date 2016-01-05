@@ -24,7 +24,7 @@ body {
 
 
     #wrapper {
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         margin: 0;
@@ -132,23 +132,94 @@ body {
 
             #inner {
                 margin-left: 155px;
-                margin-top: 50px;
+                margin-top: 80px;
+                margin-right: 5px;
                 min-height: 600px;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
+                -ms-flex-direction: column;
+                -webkit-flex-direction: column;
+                flex-direction: column;
 
+                #carousel-container {
+                    display: block;
+                    width: 100%;
+                    -webkit-box-shadow: 5px 27px 44px -4px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 5px 27px 44px -4px rgba(0,0,0,0.75);
+                    box-shadow: 5px 27px 44px -4px rgba(0,0,0,0.75);
 
+                    #myCarousel {
+                        .carousel-inner > .item > img,
+                        .carousel-inner > .item > a > img {
+                            width: 500px;
+                            height: 250px;
+                            margin: 0 auto;
+                        }
 
-                .article-field {
+                        .carousel-caption {
+                            width: 60%;
+                            height: 20px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
+                #container {
+                    width: 100%;
                     display: flex;
+                    margin-top: 20px;
+                    -ms-flex-direction: row;
+                    -webkit-flex-direction: row;
                     flex-direction: row;
-                    justify-content: center;
-                    flex-wrap: wrap;
+                    justify-content: space-around;
+
+                    .exams {
+                        width: 30%;
+
+                        h3 {
+                            margin: 0;
+                            padding: 10px 20px;
+                            text-align: center;
+                            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#752525+1,ff1414+6,ff1414+6,ff8e8e+20,ffd1d1+52,ff4447+82,ff1414+95,752525+100 */
+                            background: rgb(117,37,37); /* Old browsers */
+                            background: -moz-linear-gradient(top, rgba(117,37,37,1) 1%, rgba(255,20,20,1) 6%, rgba(255,20,20,1) 6%, rgba(255,142,142,1) 20%, rgba(255,209,209,1) 52%, rgba(255,68,71,1) 82%, rgba(255,20,20,1) 95%, rgba(117,37,37,1) 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top, rgba(117,37,37,1) 1%,rgba(255,20,20,1) 6%,rgba(255,20,20,1) 6%,rgba(255,142,142,1) 20%,rgba(255,209,209,1) 52%,rgba(255,68,71,1) 82%,rgba(255,20,20,1) 95%,rgba(117,37,37,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom, rgba(117,37,37,1) 1%,rgba(255,20,20,1) 6%,rgba(255,20,20,1) 6%,rgba(255,142,142,1) 20%,rgba(255,209,209,1) 52%,rgba(255,68,71,1) 82%,rgba(255,20,20,1) 95%,rgba(117,37,37,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#752525', endColorstr='#752525',GradientType=0 ); /* IE6-9 */
+                            -webkit-box-shadow: -1px 13px 24px -1px rgba(0,0,0,0.75);
+                            -moz-box-shadow: -1px 13px 24px -1px rgba(0,0,0,0.75);
+                            box-shadow: -1px 13px 24px -1px rgba(0,0,0,0.75);
+                        }
+
+                        article {
+                            padding: 10px;
+                            background-color: rgba(255,68,71,0.2);
+                            border: 1px solid grey;
+                            border-top: none;
+                            -webkit-box-shadow: 5px 27px 44px -4px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 5px 27px 44px -4px rgba(0,0,0,0.75);
+                            box-shadow: 5px 27px 44px -4px rgba(0,0,0,0.75);
+                            min-height: 400px;
+                            font-style: italic;
+
+                            p {
+                                margin-top: 15px;
+
+                                &::first-letter {
+                                    margin-left: 20px;
+                                }
+
+                                span {
+                                    font-weight: bolder;
+                                    font-style: normal;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
+
+
 
 
         footer {
@@ -257,50 +328,19 @@ body {
                 #inner {
                     margin-left: 40px;
 
-                    .article-field {
+                    #container {
+                        width: 100%;
+                        display: flex;
+                        margin-top: 20px;
                         -ms-flex-direction: column;
                         -webkit-flex-direction: column;
                         flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        article {
-                            order: 3;
-                        }
-
-                        & > img {
-                            order: 1;
-                            margin-top: 0;
-                            margin-bottom: 10px;
-                            border: 10px solid white;
-                        }
-
-                        .other-lectors {
-                            max-width: 100%;
-                            order: 2;
-                            border: none;
-
-                            ul {
-                                max-width: 100%;
+                        justify-content: space-between;
 
 
-                                li {
-                                    border: 5px solid white;
-                                    width: fit-content;
-                                    margin: 20px 30px;
-                                    border-radius: 100px;
-                                    overflow: hidden;
-                                    -webkit-box-shadow: 0px 2px 15px 2px rgba(0,0,0,0.75);
-                                    -moz-box-shadow: 0px 2px 15px 2px rgba(0,0,0,0.75);
-                                    box-shadow: 0px 2px 15px 2px rgba(0,0,0,0.75);
-
-
-
-                                    &:nth-child(2), &:nth-child(3) {
-                                        display: none;
-                                    }
-                                }
-                            }
+                        .exams {
+                            width: 100%;
+                            margin-top: 10px;
                         }
                     }
                 }

@@ -42,7 +42,7 @@ body {
                 border-top-left-radius: 10px;
 
 
-                header {
+                .section-header {
                     width: 100%;
                     padding: 15px;
                     -moz-box-sizing: border-box;
@@ -92,6 +92,26 @@ body {
                         font-weight: bold;
                         color: #fff;
                         text-shadow: 8px 8px 10px #808080;
+
+                        h3 {
+                            text-align: center;
+                            margin: 0;
+                            margin-bottom: 20px;
+                            font-weight: bold;
+                            text-shadow: 10px 10px 5px #808080;
+                        }
+
+                        p {
+                            font-size: 20px;
+                        }
+
+                        ul {
+                            li {
+                                list-style: none;
+                                margin-bottom: 10px;
+                                font-style: italic;
+                            }
+                        }
                     }
 
                     #carousel-container {

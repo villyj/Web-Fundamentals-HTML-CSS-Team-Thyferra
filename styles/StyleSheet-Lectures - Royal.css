@@ -15,6 +15,9 @@ body {
 }
 
 body #wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
   margin: 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -60,7 +63,7 @@ body #wrapper main > nav {
   background-repeat: repeat-y;
   width: 150px;
   height: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
@@ -68,7 +71,6 @@ body #wrapper main > nav {
 
 body #wrapper main > nav > ul {
   margin-top: 200px;
-  margin-bottom: 140px;
 }
 
 body #wrapper main > nav > ul > li {
@@ -131,6 +133,7 @@ body #wrapper main #inner {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 body #wrapper main #inner .article-field {
@@ -153,7 +156,7 @@ body #wrapper main #inner .article-field article {
 
 body #wrapper main #inner .article-field article table {
   width: 100%;
-  border-spacing: 20px;
+  border-spacing: 10px;
 }
 
 body #wrapper main #inner .article-field article table th {
@@ -213,7 +216,7 @@ body #wrapper main #inner .article-field > img {
   margin-top: 30px;
   flex: 30%;
   max-width: 50%;
-  object-fit: cover;
+  object-fit: fill;
   max-height: 450px;
 }
 
@@ -284,7 +287,46 @@ body #wrapper footer {
 body #wrapper footer p {
   margin: 0;
   margin-bottom: 2px;
+  margin-top: 2px;
   opacity: 0.5;
+}
+
+@media only screen and (max-width: 970px) {
+  body {
+    font-size: 10px;
+  }
+  body #wrapper main nav {
+    width: 100px;
+  }
+  body #wrapper main #inner {
+    margin-left: 105px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  body #wrapper header {
+    justify-content: center;
+  }
+  body #wrapper main #inner .article-field {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body #wrapper main #inner .article-field article {
+    order: 3;
+  }
+  body #wrapper main #inner .article-field > img {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border: 10px solid white;
+  }
+  body #wrapper main #inner .article-field .other-lectors {
+    order: 2;
+    border: none;
+  }
 }
 
 /*# sourceMappingURL=StyleSheet-Lectures - Royal.css.map */

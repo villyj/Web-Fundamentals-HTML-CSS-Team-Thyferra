@@ -24,6 +24,9 @@ body {
 
 
     #wrapper {
+        position: relative;
+        top: 0;
+        left: 0;
         margin: 0;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -63,14 +66,14 @@ body {
                 background-repeat: repeat-y;
                 width: 150px;
                 height: 100%;
-                position: fixed;
+                position: absolute;
                 top: 0;
                 left: 0;
                 z-index: 2;
 
                 & > ul {
                     margin-top: 200px;
-                    margin-bottom: 140px;
+
 
                     & > li {
                         margin: 30px 0 30px 33px;
@@ -134,6 +137,7 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: relative;
 
 
 
@@ -157,7 +161,7 @@ body {
 
                         table {
                             width: 100%;
-                            border-spacing: 20px;
+                            border-spacing: 10px;
 
                             th {
                                 padding: 20px;
@@ -220,8 +224,8 @@ body {
                         margin-top: 30px;
                         flex: 30%;
                         max-width: 50%;
-                        object-fit:cover;
-                        max-height:450px;
+                        object-fit: fill;
+                        max-height: 450px;
                     }
 
                     .other-lectors {
@@ -306,8 +310,73 @@ body {
             p {
                 margin: 0;
                 margin-bottom: 2px;
+                margin-top: 2px;
                 opacity: 0.5;
             }
+        }
+    }
+}
+
+
+@media only screen and (max-width:970px) {
+    body {
+        font-size: 10px;
+
+        #wrapper {
+            main {
+                nav {
+                    width: 100px;
+                }
+
+                #inner {
+                    margin-left: 105px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:750px) {
+    body {
+        #wrapper {
+            header {
+                justify-content: center;
+            }
+
+            main {
+                #inner {
+                    .article-field {
+                        -ms-flex-direction: column;
+                        -webkit-flex-direction: column;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        article {
+                            order: 3;
+                        }
+
+                        & > img {
+                            order: 1;
+                            margin-top: 0;
+                            margin-bottom: 10px;
+                            border: 10px solid white;
+                        }
+
+                        .other-lectors {
+                            order: 2;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:360px) {
+    body {
+        #wrapper {
         }
     }
 }

@@ -8,10 +8,70 @@ body {
     background-size: cover;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+
+    nav {
+        width: 12%;
+
+        ul li {
+            list-style: none;
+            margin: 30px 0 30px 0;
+            border-radius: 50%;
+            background-color: red;
+            padding: 12px; /*Size of balls*/
+            width: fit-content;
+            -webkit-box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+            box-shadow: inset 3px 3px 17px -1px rgba(0,0,0,0.75);
+
+
+            &:nth-child(1) {
+                background-color: saddlebrown;
+            }
+
+            &:nth-child(2) {
+                background-color: rgba(229,170,2,1);
+            }
+
+            &:nth-child(3) {
+                background-color: #a900b4;
+            }
+
+            &:nth-child(4) {
+                background-color: #50ac00;
+            }
+
+            &:nth-child(5) {
+                background-color: #017395;
+            }
+
+            &:nth-child(6) {
+                background-color: #c5bd99;
+            }
+
+            a {
+                display: none;
+            }
+
+            &:hover {
+                border: 3px solid white;
+                padding: 10px;
+                border-radius: 10px;
+
+                a {
+                    display: block;
+                    color: white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
 
     #wrapper {
-        width: 88%;
-        margin-left: 183px;
+        width: 87%;
+        margin-left: 4px;
         font-family: 'texgyreadventor-regular';
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -155,6 +215,18 @@ body {
 @media all and (max-width: 1200px) {
     body {
         background: none;
+        -ms-flex-direction: column-reverse;
+        -webkit-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+
+        nav {
+            width: 100%;
+
+            ul {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
 
         #wrapper {
             width: 100%;

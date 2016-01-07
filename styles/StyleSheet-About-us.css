@@ -152,6 +152,8 @@ body #wrapper main #inner ul {
   z-index: 1;
   width: 75%;
   display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

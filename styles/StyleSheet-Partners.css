@@ -9,6 +9,8 @@ body {
 }
 
 body #wrapper {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5px;
   position: absolute;
@@ -121,9 +123,9 @@ body #wrapper aside {
 }
 
 body #wrapper aside .container {
-  margin: 5px;
-  width: 250px;
-  height: 200px;
+  margin: 10px;
+  width: 220px;
+  height: 146px;
   border: 3px solid white;
   position: relative;
   overflow: hidden;
@@ -147,7 +149,7 @@ body #wrapper aside .container img {
 }
 
 body #wrapper aside .container .textbox {
-  width: 250px;
+  width: 220px;
   height: 30px;
   position: absolute;
   top: 0;
@@ -155,7 +157,7 @@ body #wrapper aside .container .textbox {
   text-align: center;
   margin-top: -30px;
   border-radius: 5px;
-  background-color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: inset 0px 0px 5px 2px rgba(255, 255, 255, 0.75);
   box-shadow: inset 0px 0px 5px 2px rgba(255, 255, 255, 0.75);
 }
@@ -183,8 +185,10 @@ body #wrapper aside .container .text a {
   font-size: 0.7em;
 }
 
-body #wrapper aside .container .textbox {
+body #wrapper aside .container html > body .textbox {
   -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
 
@@ -194,6 +198,9 @@ body #wrapper footer {
   bottom: 0;
   text-align: center;
   font-size: 0.7em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body #wrapper footer p {
@@ -202,72 +209,4 @@ body #wrapper footer p {
   opacity: 0.5;
 }
 
-#main-navbar, .jumbotron, .navbar-brand {
-font-family: texgyreadventor-regular;
-}
-
-.navbar {
-	box-shadow: 0px 7px 10px black;
-}
-
-#main-navbar {
-	font-size:16px;
-}
-
-#top-menu {
-	padding-left: 50px;
-}
-
-#top-menu li a {
-	color:lightgray;
-}
-
-#top-menu li a:hover:not(#login-btn) {
-	color:black;
-	background-color: white;
-}
-
-#video {
-    width: 380px;
-    height: 380px;
-    margin: 20px 0 20px 320px;
-
-
-}
-
-#login-wrapper section {
-    width: 700px;
-    margin-left: 380px;
-}
-
-#login-wrapper input {
-    width: 50px;
-    height: 56px;
-    background-color: aqua;
-    display: table-cell;
-    vertical-align: top;
-    margin-top: 100px;
-}
-
-#login-wrapper {
-    border-top:none !important;
-}
-
-
-.navbar-brand {
-	font-size:24px;
-}
-
-.jumbotron {
-	background-color: grey
-	height: 10px;
-    margin-bottom: 0;
-}
-
-.jumbotron>h1{
-	font-size: 16px;
-	text-align: center;
-	padding-top: 100px;
-}
-
-
+/*# sourceMappingURL=StyleSheet-Partners.css.map */

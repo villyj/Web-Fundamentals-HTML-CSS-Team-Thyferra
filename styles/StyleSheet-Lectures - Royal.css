@@ -138,12 +138,16 @@ body #wrapper main #inner {
 
 body #wrapper main #inner .article-field {
   display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 body #wrapper main #inner .article-field article {
+  -ms-flex: 30%;
+  -webkit-flex: 30%;
   flex: 30%;
   background: white;
   z-index: 1;
@@ -214,13 +218,18 @@ body #wrapper main #inner .article-field article table #friends {
 
 body #wrapper main #inner .article-field > img {
   margin-top: 30px;
+  -ms-flex: 30%;
+  -webkit-flex: 30%;
   flex: 30%;
   max-width: 50%;
+  -o-object-fit: fill;
   object-fit: fill;
   max-height: 450px;
 }
 
 body #wrapper main #inner .article-field .other-lectors {
+  -ms-flex: 100%;
+  -webkit-flex: 100%;
   flex: 100%;
   width: fit-content;
   border-top: 10px solid white;

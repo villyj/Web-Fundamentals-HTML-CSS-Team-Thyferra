@@ -17,6 +17,8 @@ body {
 
 
     #wrapper {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         padding: 5px;
         position: absolute;
@@ -197,8 +199,10 @@ body {
                     }
                 }
 
-                .textbox {
+                html > /**/ body .textbox {
                     -webkit-transition: all 0.7s ease;
+                    -moz-transition: all 0.7s ease;
+                    -o-transition: all 0.7s ease;
                     transition: all 0.7s ease;
                 }
             }
@@ -210,6 +214,8 @@ body {
             bottom: 0;
             text-align: center;
             font-size: 0.7em;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
             box-sizing: border-box;
 
             p {

@@ -139,6 +139,8 @@ body #wrapper main #inner {
 body #wrapper main #inner ul {
   width: 90%;
   display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

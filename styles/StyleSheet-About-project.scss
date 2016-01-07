@@ -56,7 +56,7 @@ body {
                 margin-right: 50px;
                 font-size: 2.5em;
                 color: white;
-                text-shadow: 0px 0px 4px #262B27;
+                text-shadow: 0 0 4px #262B27;
             }
         }
 
@@ -156,6 +156,8 @@ body {
                 .article-field {
                     width: 60%;
                     display: flex;
+                    -ms-flex-direction: column;
+                    -webkit-flex-direction: column;
                     flex-direction: column;
                     background-color: rgba(255,255,255,0.7);
                     line-height: 30px;
